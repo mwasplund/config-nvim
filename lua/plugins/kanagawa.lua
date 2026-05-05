@@ -8,6 +8,6 @@ return {
         vim.cmd("colorscheme kanagawa");
     end,
     build=function()
-        vim.cmd("KanagawaCompilie");
+        vim.cmd("KanagawaCompile");
     end,
 }
