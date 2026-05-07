@@ -44,5 +44,6 @@ require("plugins.themes")
 require("plugins.telescope")
 require("plugins.treesitter")
 require("plugins.which-key")
+require("plugins.lspconfig")
 
 require("config.keymaps")
