@@ -1,21 +1,16 @@
-return {
-    'nvim-telescope/telescope.nvim', version = '*',
-    dependencies = {
-        'nvim-lua/plenary.nvim',
-        -- optional but recommended
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+vim.pack.add({
+  gh 'nvim-lua/plenary.nvim',
+  gh 'nvim-telescope/telescope.nvim',
+})
+
+require('telescope').setup({
+  defaults = {
+    layout_config = {
+      vertical = { width = 0.9 },
+      horizontal = { width = 0.9 }
+      -- other layout configuration here
     },
-    config = function()
-       require('telescope').setup({
-          defaults = {
-            layout_config = {
-              vertical = { width = 0.9 },
-              horizontal = { width = 0.9 }
-              -- other layout configuration here
-            },
-            -- other defaults configuration here
-          },
-          -- other configuration values here
-        })
-    end
-}
+  -- other defaults configuration here
+  },
+-- other configuration values here
+})

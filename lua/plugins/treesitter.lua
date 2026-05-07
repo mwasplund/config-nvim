@@ -1,10 +1,10 @@
-return {
-  {
-    'nvim-treesitter/nvim-treesitter',
-    build = ':TSUpdate',
-    config = function()
+vim.pack.add({
+  gh 'nvim-treesitter/nvim-treesitter',
+  gh 'nvim-treesitter/nvim-treesitter-textobjects',
+  -- Incremental selection
+  gh 'shushtain/incselect.nvim',
+})
       local treesitter = require("nvim-treesitter")
-      treesitter.setup()
       treesitter.install({
         "lua",
         "javascript",
@@ -32,16 +32,7 @@ return {
           vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
         end,
       })
-    end,
-  },
-  {
-    -- Incremental selection
-    'shushtain/incselect.nvim'
-  },
-  {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    branch = "main",
-    init = function()
+
       -- Disable entire built-in ftplugin mappings to avoid conflicts.
       -- See https://github.com/neovim/neovim/tree/master/runtime/ftplugin for built-in ftplugins.
       vim.g.no_plugin_maps = true
@@ -51,10 +42,8 @@ return {
       -- vim.g.no_ruby_maps = true
       -- vim.g.no_rust_maps = true
       -- vim.g.no_go_maps = true
-    end,
-    config = function()
-      -- put your config here
-      require("nvim-treesitter-textobjects").setup {
+     
+require("nvim-treesitter-textobjects").setup {
         select = {
           -- Automatically jump forward to textobj, similar to targets.vim
           lookahead = true,
@@ -82,6 +71,3 @@ return {
           include_surrounding_whitespace = false,
         },
       }
-    end,
-  }
-}
