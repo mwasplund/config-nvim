@@ -34,6 +34,7 @@ vim.api.nvim_create_autocmd('PackChanged', {
 
 require("config.options")
 
+require("plugins.fidget")
 require("plugins.gitdiff")
 require("plugins.oil")
 require("plugins.statusline")
