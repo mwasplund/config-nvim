@@ -1,5 +1,7 @@
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc="Open parent directory in Oil" })
 
+vim.keymap.set('n', 'gl', function() vim.diagnostic.open_float() end, { desc = "Open diagnostic float" })
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
