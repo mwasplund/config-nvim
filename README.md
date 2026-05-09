@@ -30,6 +30,11 @@ Neovim Configs
         },
       }p
 
+Install treesitter CLI
+```
+cargo install tree-sitter-cli
+```
+
 Ensure we have a C compiler for treesitter to build the languages.
 ```
 sudo apt install build-essentials
