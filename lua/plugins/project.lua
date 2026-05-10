@@ -1,3 +1,3 @@
 vim.pack.add({
-  gh "ahmedkhalf/project.nvim",
+	gh("ahmedkhalf/project.nvim"),
 })

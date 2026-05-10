@@ -1,3 +1,3 @@
 vim.pack.add({
-    gh 'sindrets/diffview.nvim'
+	gh("sindrets/diffview.nvim"),
 })

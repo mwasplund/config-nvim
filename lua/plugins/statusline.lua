@@ -1,6 +1,6 @@
 vim.pack.add({
-    gh 'nvim-mini/mini.statusline',
+	gh("nvim-mini/mini.statusline"),
 })
 
-local statusline = require 'mini.statusline'
-statusline.setup { use_icons = true }
+local statusline = require("mini.statusline")
+statusline.setup({ use_icons = true })

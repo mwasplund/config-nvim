@@ -1,3 +1,3 @@
 vim.pack.add({
-    gh "tpope/vim-sleuth"
+	gh("tpope/vim-sleuth"),
 })
