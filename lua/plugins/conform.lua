@@ -2,6 +2,9 @@ vim.pack.add({ gh("stevearc/conform.nvim") })
 
 require("conform").setup({
 	formatters_by_ft = {
+		c = { "clang-format" },
+		cpp = { "clang-format" },
+		cs = { "csharpier" },
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		python = { "isort", "black" },

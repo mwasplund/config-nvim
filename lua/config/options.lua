@@ -6,11 +6,11 @@ vim.loader.enable()
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
+vim.opt.expandtab = false
+vim.opt.shiftwidth = 2
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
 
 vim.opt.smarttab = true
 vim.opt.smartindent = true
@@ -65,7 +65,7 @@ vim.o.splitbelow = true
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 vim.o.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+vim.opt.listchars = { tab = "  ", space = "·", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.o.inccommand = "split"

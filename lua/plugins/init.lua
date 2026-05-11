@@ -1,3 +1,4 @@
+require("plugins.blink-cmp")
 require("plugins.conform")
 require("plugins.fidget")
 require("plugins.gitdiff")
