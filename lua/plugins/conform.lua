@@ -5,6 +5,7 @@ require("conform").setup({
 		c = { "clang-format" },
 		cpp = { "clang-format" },
 		cs = { "csharpier" },
+		json = { "prettier" },
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		python = { "isort", "black" },
