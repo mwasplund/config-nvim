@@ -16,12 +16,12 @@ require("conform").setup({
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()
-		timeout_ms = 500,
+		timeout_ms = 1000,
 		lsp_format = "fallback",
 	},
 })
 
 -- Format shortcut
 vim.keymap.set("n", "<leader>cf", function()
-	require("conform").format()
+	require("conform").format({ timeout_ms = 10000 })
 end, { desc = "[C]ode [f]ormat" })

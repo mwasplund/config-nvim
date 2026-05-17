@@ -1,5 +1,6 @@
 require("plugins.blink-cmp")
 require("plugins.conform")
+require("plugins.dapconfig")
 require("plugins.fidget")
 require("plugins.gitdiff")
 require("plugins.oil")
