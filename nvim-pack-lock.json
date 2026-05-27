@@ -43,6 +43,11 @@
       "rev": "84a4987ff36798c2fc1169cbaff67960aed9776f",
       "src": "https://github.com/NMAC427/guess-indent.nvim"
     },
+    "harpoon": {
+      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
+      "src": "https://github.com/ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
+    },
     "incselect.nvim": {
       "rev": "723b6bcf451134dc652f2c41b86bcf15b69747c0",
       "src": "https://github.com/shushtain/incselect.nvim"
@@ -83,6 +88,10 @@
       "rev": "b4421153ead5d726603b02743ea40cf26a51ed5f",
       "src": "https://github.com/leoluz/nvim-dap-go"
     },
+    "nvim-dap-rr": {
+      "rev": "9d4cb40d04b7822b075482b4fad9742aa43a87b2",
+      "src": "https://github.com/jonboh/nvim-dap-rr"
+    },
     "nvim-dap-ui": {
       "rev": "1a66cabaa4a4da0be107d5eda6d57242f0fe7e49",
       "src": "https://github.com/rcarriga/nvim-dap-ui"
@@ -90,6 +99,10 @@
     "nvim-lspconfig": {
       "rev": "31026a13eefb20681124706a79fc1df6bf11ab27",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-navic": {
+      "rev": "f5eba192f39b453675d115351808bd51276d9de5",
+      "src": "https://github.com/SmiteshP/nvim-navic"
     },
     "nvim-nio": {
       "rev": "21f5324bfac14e22ba26553caf69ec76ae8a7662",

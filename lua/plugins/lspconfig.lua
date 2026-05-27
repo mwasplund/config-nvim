@@ -68,6 +68,21 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+-- vim.lsp.log.set_level(vim.log.levels.DEBUG)
+-- vim.lsp.log.set_format_func(vim.inspect)
+
+vim.pack.add({
+	gh("neovim/nvim-lspconfig"),
+	gh("mason-org/mason.nvim"),
+	gh("mason-org/mason-lspconfig.nvim"),
+	gh("WhoIsSethDaniel/mason-tool-installer.nvim"),
+	-- Show current selection context in status bar
+	gh("SmiteshP/nvim-navic"),
+})
+
+local navic = require("nvim-navic")
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+
 -- Enable the following language servers
 --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 --  See `:help lsp-config` for information about keys and how to configure
@@ -75,10 +90,17 @@ vim.api.nvim_create_autocmd("LspAttach", {
 local servers = {
 	clangd = {
 		cmd = {
+			-- "rr",
+			-- "record",
+			-- "/home/mwasplund/repos/llvm-project/build/bin/clangd",
 			"/usr/bin/clangd-22",
 			"--experimental-modules-support",
+			-- "--log=verbose",
 			-- other flags like "--background-index", "--clang-tidy"
 		},
+		on_attach = function(client, bufnr)
+			navic.attach(client, bufnr)
+		end,
 	},
 	-- gopls = {},
 	-- pyright = {},
@@ -135,13 +157,6 @@ local servers = {
 	},
 }
 
-vim.pack.add({
-	gh("neovim/nvim-lspconfig"),
-	gh("mason-org/mason.nvim"),
-	gh("mason-org/mason-lspconfig.nvim"),
-	gh("WhoIsSethDaniel/mason-tool-installer.nvim"),
-})
-
 -- Automatically install LSPs and related tools to stdpath for Neovim
 require("mason").setup({})
 
@@ -168,3 +183,11 @@ for name, server in pairs(servers) do
 	vim.lsp.config(name, server)
 	vim.lsp.enable(name)
 end
+
+-- vim.lsp.config("soup-bsp", {
+--	cmd = {
+--		"/home/mwasplund/repos/soup/out/cpp/local/soup-bsp/0.1.0/J_HqSstV55vlb-x6RWC_hLRFRDU/bin/soup-bsp",
+--	},
+--	filetypes = { "sml" },
+--})
+-- vim.lsp.enable("soup-bsp")
