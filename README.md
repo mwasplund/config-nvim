@@ -3,21 +3,29 @@ Neovim Configs
 
 ## Manual Setup
 
-Install treesitter CLI
-```
-cargo install tree-sitter-cli
-```
-
 Ensure we have a C compiler for treesitter to build the languages.
 ```
 sudo apt install build-essential
 ```
-Ensure we have LSPs
+
+[Install Rust](https://rust-lang.org/tools/install/) and [Cargo-Binstall](https://github.com/cargo-bins/cargo-binstall)
+
+Install treesitter CLI
 ```
-npm install -g typescript-language-server typescript vscode-langservers-extracted @tailwindcss/language-server
+cargo binstall tree-sitter-cli
+```
+
+Clangd needs unzip
+```
+sudo apt install unzip
 ```
 
 Clang-format needs python3
 ```
 sudo apt install python3-venv
+```
+
+CSharp needs dotnet
+```
+sudo apt install dotnet10
 ```
