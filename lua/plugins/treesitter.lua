@@ -6,6 +6,7 @@ vim.pack.add({
 })
 local treesitter = require("nvim-treesitter")
 treesitter.install({
+	"go",
 	"lua",
 	"javascript",
 	"typescript",
@@ -24,6 +25,7 @@ treesitter.install({
 
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {
+		"go",
 		"java",
 		"c",
 		"cpp",
