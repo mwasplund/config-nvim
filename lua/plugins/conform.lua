@@ -5,6 +5,7 @@ require("conform").setup({
 		c = { "clang-format" },
 		cpp = { "clang-format" },
 		cs = { "csharpier" },
+		go = { "goimports", "gofumpt" },
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		json = { "prettierd", "prettier", stop_after_first = true },
 		lua = { "stylua" },
